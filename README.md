@@ -136,12 +136,10 @@ meson compile -C build
 sudo meson install -C build
 ```
 
-
 ```
 sudo ldconfig
 rpicam-still --version
 ```
-
 
 ```
 sudo tee -a /boot/firmware/config.txt <<EOF
@@ -150,6 +148,17 @@ dtoverlay=imx219,cam1
 EOF
 ```
 
+```
+rpicam-hello --list-cameras
+```
+
+```
+
+```
+
+```
+
+```
 
 ```
 
