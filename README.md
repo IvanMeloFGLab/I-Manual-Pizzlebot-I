@@ -64,6 +64,10 @@ echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
 echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
 echo "export _colcon_cd_root=/opt/ros/jazzy/"
-echo "alias cb = 'cd ~/ros2_ws; colcon build && source install/setup.bash'"
-echo "alias cb = 'cd ~/ros2_ws; source install/setup.bash'"
+echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'"
+echo "alias cb='cd ~/ros2_ws; source install/setup.bash'"
+```
+
+```
+
 ```
