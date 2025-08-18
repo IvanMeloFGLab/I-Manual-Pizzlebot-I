@@ -30,28 +30,40 @@ sudo dpkg -i /tmp/ros2-apt-source.deb
 ```
 
 ```
-sudo apt update && sudo apt install -y \
-  python3-flake8-blind-except \
-  python3-flake8-class-newline \
-  python3-flake8-deprecated \
-  python3-mypy \
-  python3-pip \
-  python3-pytest \
-  python3-pytest-cov \
-  python3-pytest-mock \
-  python3-pytest-repeat \
-  python3-pytest-rerunfailures \
-  python3-pytest-runner \
-  python3-pytest-timeout \
-  ros-dev-tools
+sudo apt update && sudo apt install ros-dev-tools
 ```
 
 ```
-mkdir -p ~/ros2_jazzy/src
-cd ~/ros2_jazzy
-vcs import --input https://raw.githubusercontent.com/ros2/ros2/jazzy/ros2.repos src
+sudo apt update
 ```
 
 ```
 sudo apt upgrade
+```
+
+```
+sudo apt install ros-jazzy-desktop
+```
+
+```
+sudo apt install ros-jazzy-ros-base
+```
+
+```
+source /opt/ros/jazzy/setup.bash
+```
+
+```
+cd
+mkdir ros2_ws
+```
+
+
+```
+echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
+echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
+echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
+echo "export _colcon_cd_root=/opt/ros/jazzy/"
+echo "alias cb = 'cd ~/ros2_ws; colcon build && source install/setup.bash'"
+echo "alias cb = 'cd ~/ros2_ws; source install/setup.bash'"
 ```
