@@ -1,6 +1,12 @@
 # |Manual-Pizzlebot|
 Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2
 
+## Install Depenedncies
+
+```
+sudo apt-get install python3-pip -y
+```
+
 ## ROS2 Jazzy Jalisco install
 
 Para mas info referir a la documentación original.
@@ -67,6 +73,79 @@ echo "export _colcon_cd_root=/opt/ros/jazzy/"
 echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'"
 echo "alias cb='cd ~/ros2_ws; source install/setup.bash'"
 ```
+
+## Micro-ros install
+
+```
+source /opt/ros/$ROS_DISTRO/setup.bash
+```
+
+```
+mkdir uros
+cd uros
+git clone -b $ROS_DISTRO https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
+```
+
+```
+rosdep init
+rosdep update
+sudo apt update
+rosdep install --from-paths src --ignore-src -y
+```
+
+```
+colcon build
+source install/local_setup.bash
+```
+
+
+
+```
+
+```
+
+
+
+```
+
+```
+
+
+
+```
+
+```
+
+
+
+```
+
+```
+
+
+
+```
+
+```
+
+
+
+```
+
+```
+
+
+
+
+```
+
+```
+
+
+```
+
+```
+
 
 ```
 
