@@ -150,11 +150,11 @@ EOF
 ```
 
 ```
+sudo reboot
+```
+
+```
 rpicam-hello --list-cameras
-```
-
-```
-
 ```
 
 ```
