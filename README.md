@@ -107,10 +107,10 @@ ros2 run micro_ros_setup build_agent.sh
 source install/local_setup.bash
 ```
 
-
+## RPI Camara V2 setup && test
 
 ```
-
+sudo apt install clang meson ninja-build pkg-config libyaml-dev python3-yaml python3-ply python3-jinja2 openssl
 ```
 
 
