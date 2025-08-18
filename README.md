@@ -45,3 +45,13 @@ sudo apt update && sudo apt install -y \
   python3-pytest-timeout \
   ros-dev-tools
 ```
+
+```
+mkdir -p ~/ros2_jazzy/src
+cd ~/ros2_jazzy
+vcs import --input https://raw.githubusercontent.com/ros2/ros2/jazzy/ros2.repos src
+```
+
+```
+sudo apt upgrade
+```
