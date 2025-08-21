@@ -3,8 +3,7 @@ Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2 en Ubuntu 25.04
 
 ## Actualizar sistema.
 ```
-sudo apt update
-sudo apt upgrade
+sudo apt update && apt upgrade
 ```
 
 ## Instalar dependencias.
