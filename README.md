@@ -79,6 +79,10 @@ echo "alias cb='cd ~/ros2_ws; source install/setup.bash'"
 
 ## Micro-ros install
 
+Para mas info referir a la documentación original.
+
+https://micro.ros.org/docs/tutorials/core/first_application_linux/
+
 ```
 source /opt/ros/$ROS_DISTRO/setup.bash
 ```
@@ -111,6 +115,7 @@ source install/local_setup.bash
 ```
 
 ## RPI Camara V2 setup && test
+
 Following:
 
 https://askubuntu.com/questions/1542652/getting-rpicam-tools-rpicam-apps-working-on-ubuntu-22-04-lts-for-the-raspber
