@@ -158,7 +158,7 @@ rpicam-hello --list-cameras
 ```
 
 ```
-
+rpicam-hello -camera <camera_number>
 ```
 
 ```
