@@ -105,16 +105,16 @@ rosdep update
 sudo apt update
 rosdep install --from-paths src --ignore-src -y
 ```
-
+Crear herramientas micro-ROS y cargarlas.
 ```
 colcon build
 source install/local_setup.bash
 ```
-
+Descargar el agente de micro-ROS.
 ```
 ros2 run micro_ros_setup create_agent_ws.sh
 ```
-
+Crear el agente de micro-ROS.
 ```
 ros2 run micro_ros_setup build_agent.sh
 source install/local_setup.bash
@@ -157,7 +157,7 @@ sudo sed -i '/app.ShowPreview(completed_request, app.VideoStream());/d' ~/rpicam
 sudo apt install cmake libboost-program-options-dev libdrm-dev libexif-dev -y
 sudo apt install ffmpeg libavcodec-extra libavcodec-dev libavdevice-dev libpng-dev libpng-tools libepoxy-dev -y
 sudo apt install qt5-qmake qtmultimedia5-dev -y
-meson setup build -Denable_libav=enabled -Denable_drm=enabled -Denable_egl=enabled -Denable_qt=enabled -Denable_opencv=disabled -Denable_tflite=disabled -Denable_hailo=disabled
+meson setup build -Denable_libav=enabled -Denable_drm=enabled -Denable_egl=enabled -Denable_qt=enabled -Denable_opencv=enabled -Denable_tflite=disabled -Denable_hailo=enabled
 meson compile -C build
 sudo meson install -C build
 ```
