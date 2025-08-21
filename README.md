@@ -1,10 +1,16 @@
 # |Manual-Pizzlebot|
 Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2 en Ubuntu 25.04
 
+## Actualizar sistema.
+```
+sudo apt update
+sudo apt upgrade
+```
+
 ## Instalar dependencias.
 
 ```
-sudo apt-get install python3-pip git -y
+sudo apt-get install python3-pip git python3-pip -y
 ```
 
 ## Instalación de ROS2 Jazzy Jalisco.
@@ -93,7 +99,7 @@ mkdir uros
 cd uros
 git clone -b $ROS_DISTRO https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
 ```
-
+Actualizar dependencias utilizando rosdep.
 ```
 rosdep init
 rosdep update
