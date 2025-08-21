@@ -116,11 +116,11 @@ source install/local_setup.bash
 
 ## Cámara RPI V2 configuración y pruebas.
 
-Following:
+Siguiendo procedimiento de:
 
 https://askubuntu.com/questions/1542652/getting-rpicam-tools-rpicam-apps-working-on-ubuntu-22-04-lts-for-the-raspber
 
-Based on:
+Basado en:
 
 https://github.com/raspberrypi/libcamera
 
