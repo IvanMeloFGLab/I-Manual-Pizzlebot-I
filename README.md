@@ -1,17 +1,19 @@
 # |Manual-Pizzlebot|
-Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2
+Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2 en Ubuntu 25.04
 
-## Install Depenedncies
+## Instalar dependencias.
 
 ```
 sudo apt-get install python3-pip -y
 ```
 
-## ROS2 Kilted Kaiju install
+## Instalación de ROS2 Jazzy Jalisco.
 
 Para mas info referir a la documentación original.
 
-https://docs.ros.org/en/kilted/Installation/Ubuntu-Install-Debs.html
+https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
+
+*** Instalación no oficial forzada compilando desde el código fuente en Ubuntu 25.04 ***
 
 ```
 locale
