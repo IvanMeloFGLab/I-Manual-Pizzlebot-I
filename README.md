@@ -4,7 +4,7 @@ Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2 en Ubuntu 25.04
 ## Instalar dependencias.
 
 ```
-sudo apt-get install python3-pip -y
+sudo apt-get install python3-pip git -y
 ```
 
 ## Instalación de ROS2 Jazzy Jalisco.
