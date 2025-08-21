@@ -108,6 +108,12 @@ source install/local_setup.bash
 ```
 
 ## RPI Camara V2 setup && test
+Following:
+https://askubuntu.com/questions/1542652/getting-rpicam-tools-rpicam-apps-working-on-ubuntu-22-04-lts-for-the-raspber
+Based on:
+https://github.com/raspberrypi/libcamera
+https://github.com/raspberrypi/rpicam-apps.git
+https://www.waveshare.com/wiki/IMX219-83_Stereo_Camera#Working_with_Raspberry_Pi_5_.28libcamera.29:%7E:text=Camera%20Documentation.-,Working%20with%20Raspberry%20Pi%205%20(libcamera),-Bookworm%20will%20not
 
 ```
 sudo apt install clang meson ninja-build pkg-config libyaml-dev python3-yaml python3-ply python3-jinja2 openssl -y
