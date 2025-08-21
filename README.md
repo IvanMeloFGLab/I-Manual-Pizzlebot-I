@@ -13,7 +13,7 @@ Para mas info referir a la documentación original.
 
 https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
-*** Instalación no oficial forzada compilando desde el código fuente en Ubuntu 25.04 ***
+*** Instalación no oficial, compilando desde el código fuente en Ubuntu 25.04 ***
 
 ```
 locale
@@ -77,7 +77,7 @@ echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'"
 echo "alias cb='cd ~/ros2_ws; source install/setup.bash'"
 ```
 
-## Micro-ros install
+## Instalación de Micro-ros
 
 Para mas info referir a la documentación original.
 
@@ -114,7 +114,7 @@ ros2 run micro_ros_setup build_agent.sh
 source install/local_setup.bash
 ```
 
-## RPI Camara V2 setup && test
+## Cámara RPI V2 configuración y pruebas.
 
 Following:
 
