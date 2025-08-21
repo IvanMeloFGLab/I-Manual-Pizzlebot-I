@@ -87,7 +87,7 @@ Obtener la instalación de ROS 2.
 ```
 source /opt/ros/$ROS_DISTRO/setup.bash
 ```
-
+Crear un espacio de trabajo y descargar las herramientas micro-ROS.
 ```
 mkdir uros
 cd uros
