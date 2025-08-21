@@ -186,7 +186,7 @@ rpicam-hello --list-cameras
 rpicam-hello -camera <camera_number>
 ```
 
-## Crear camara virtual y pipeline para uso en ROS2 a travéz de OpenCV.
+## Crear cámara virtual y pipeline para uso en ROS2 a travéz de OpenCV.
 
 ```
 
