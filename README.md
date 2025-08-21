@@ -7,10 +7,10 @@ Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2
 sudo apt-get install python3-pip -y
 ```
 
-## ROS2 Jazzy Jalisco install
+## ROS2 Kilted Kaiju install
 
 Para mas info referir a la documentación original.
-https://docs.ros.org/en/jazzy/Installation/Alternatives/Ubuntu-Development-Setup.html
+https://docs.ros.org/en/kilted/Installation/Ubuntu-Install-Debs.html
 
 ```
 locale  # check for UTF-8
@@ -48,15 +48,15 @@ sudo apt upgrade
 ```
 
 ```
-sudo apt install ros-jazzy-desktop
+sudo apt install ros-kilted-desktop
 ```
 
 ```
-sudo apt install ros-jazzy-ros-base
+sudo apt install ros-kilted-ros-base
 ```
 
 ```
-source /opt/ros/jazzy/setup.bash
+source /opt/ros/kilted/setup.bash
 ```
 
 ```
@@ -66,10 +66,10 @@ mkdir ros2_ws
 
 
 ```
-echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/kilted/setup.bash" >> ~/.bashrc
 echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
 echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
-echo "export _colcon_cd_root=/opt/ros/jazzy/"
+echo "export _colcon_cd_root=/opt/ros/kilted/"
 echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'"
 echo "alias cb='cd ~/ros2_ws; source install/setup.bash'"
 ```
