@@ -89,7 +89,7 @@ https://micro.ros.org/docs/tutorials/core/first_application_linux/
 
 Crear un espacio de trabajo y descargar las herramientas micro-ROS.
 ```
-mkdir uros
+cd && mkdir uros
 cd uros
 git clone -b $ROS_DISTRO https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
 ```
