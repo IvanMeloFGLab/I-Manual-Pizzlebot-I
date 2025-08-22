@@ -1,5 +1,5 @@
 # |Manual-Pizzlebot|
-Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2 en Ubuntu 25.04
+Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2 en Ubuntu 25.04 para Raspberry Pi 5.
 
 ## Actualizar sistema.
 ```
