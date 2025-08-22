@@ -20,43 +20,46 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 *** Instalación no oficial, compilando desde el código fuente en Ubuntu 25.04 ***
 
+Intalación de dependencias de ROS2.
+```
+sudo apt update && sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev \
+  libeigen3-dev libboost-all-dev libx11-dev libxext-dev libgl1-mesa-dev libglu1-mesa-dev locales liburdfdom-headers-dev
+```
+Asegúrate de que tu configuración regional admite UTF-8.
 ```
 locale
-
-sudo apt update && sudo apt install locales -y
 sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
-
 locale
 ```
-
+Intalación de dependencias en python de ROS2.
 ```
-sudo apt install software-properties-common -y
-sudo add-apt-repository universe
+pip3 install catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions --break-system-packages
 ```
-
+Crear un espacio de trabajo para los paquetes internos de ROS2.
 ```
-sudo apt update && sudo apt install curl -y
-export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}')
-curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb"
-sudo dpkg -i /tmp/ros2-apt-source.deb
+mkdir -p ~/ros2_internal_ws/src
+cd ~/ros2_internal_ws
 ```
-
+Obtener los archivos fuente de ROS2.
 ```
-sudo apt update && sudo apt install ros-dev-tools -y
+cd ~/ros2_internal_ws
+wget https://raw.githubusercontent.com/ros2/ros2/jazzy/ros2.repos
+vcs import src < ros2.repos
 ```
-
+Resolver dependencias de ROS2.
 ```
-sudo apt update
+sudo rosdep init || true
+rosdep update
+rosdep install --from-paths src --ignore-src -y --rosdistro jazzy \
+  --skip-keys "urdfdom_headers python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-vcstool"
 ```
-
+Compilación de archivos fuente de ROS2.
+*** ADVERTENCIA: Este procedimiento tarda alrededor de 3 horas. ***
 ```
-sudo apt upgrade
-```
-
-```
-sudo apt install ros-kilted-desktop
+cd ~/ros2_ws
+colcon build --symlink-install
 ```
 
 ```
