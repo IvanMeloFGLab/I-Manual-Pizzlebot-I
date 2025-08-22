@@ -87,10 +87,6 @@ Para mas info referir a la documentación original.
 
 https://micro.ros.org/docs/tutorials/core/first_application_linux/
 
-Obtener instalación de ROS2.
-```
-source /opt/ros/$ROS_DISTRO/setup.bash
-```
 Crear un espacio de trabajo y descargar las herramientas micro-ROS.
 ```
 mkdir uros
