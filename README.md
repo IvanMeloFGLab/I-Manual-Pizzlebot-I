@@ -195,7 +195,9 @@ rpicam-hello -camera <camera_number>
 ```
 
 ```
+## Instalación de HAILO8 TPU
 
+https://ubuntu.com/blog/hackers-guide-to-the-raspberry-pi-ai-kit-on-ubuntu
 
 ```
 
