@@ -3,7 +3,7 @@ Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2 en Ubuntu 25.04
 
 ## Actualizar sistema.
 ```
-sudo apt update && apt upgrade
+sudo apt update && apt upgrade -y
 ```
 
 ## Instalar dependencias.
@@ -23,7 +23,7 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 ```
 locale
 
-sudo apt update && sudo apt install locales
+sudo apt update && sudo apt install locales -y
 sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -44,7 +44,7 @@ sudo dpkg -i /tmp/ros2-apt-source.deb
 ```
 
 ```
-sudo apt update && sudo apt install ros-dev-tools
+sudo apt update && sudo apt install ros-dev-tools -y
 ```
 
 ```
