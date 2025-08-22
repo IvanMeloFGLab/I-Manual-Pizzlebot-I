@@ -58,32 +58,28 @@ rosdep install --from-paths src --ignore-src -y --rosdistro jazzy \
 Compilación de archivos fuente de ROS2.
 *** ADVERTENCIA: Este procedimiento tarda alrededor de 3 horas. ***
 ```
-cd ~/ros2_ws
+cd ~/ros2_internal_ws
 colcon build --symlink-install
 ```
-
+Obtener instalación de ROS2.
 ```
-sudo apt install ros-kilted-ros-base
+source ~/ros2_internal_ws/install/setup.bash
 ```
-
+Configuración de ROS2 y adición de alias para atajos.
 ```
-source /opt/ros/kilted/setup.bash
+echo "source ~/ros2_internal_ws/install/setup.bash" >> ~/.bashrc
+echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
+echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
+echo "export _colcon_cd_root=~/ros2_internal_ws/install/"
+echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'"
+echo "alias so='cd ~/ros2_ws; source install/setup.bash'"
 ```
-
+Crear un espacio de trabajo para ROS2.
 ```
 cd
 mkdir ros2_ws
 ```
 
-
-```
-echo "source /opt/ros/kilted/setup.bash" >> ~/.bashrc
-echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
-echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
-echo "export _colcon_cd_root=/opt/ros/kilted/"
-echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'"
-echo "alias cb='cd ~/ros2_ws; source install/setup.bash'"
-```
 
 ## Instalación de Micro-ros
 
@@ -91,7 +87,7 @@ Para mas info referir a la documentación original.
 
 https://micro.ros.org/docs/tutorials/core/first_application_linux/
 
-Obtener la instalación de ROS 2.
+Obtener instalación de ROS2.
 ```
 source /opt/ros/$ROS_DISTRO/setup.bash
 ```
