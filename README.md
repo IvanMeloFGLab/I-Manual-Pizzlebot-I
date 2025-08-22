@@ -199,11 +199,42 @@ rpicam-hello -camera <camera_number>
 
 https://ubuntu.com/blog/hackers-guide-to-the-raspberry-pi-ai-kit-on-ubuntu
 
+Intalación de dependencias de Hailo8.
 ```
-
+sudo apt-get update && sudo apt-get install \
+    build-essential dkms linux-headers-$(uname -r) -y
 ```
-
-
+Clonar el repositorio hailort-drivers y cambiar a la rama hailo8.
 ```
-
+git clone --branch hailo8 https://github.com/hailo-ai/hailort-drivers.git
+cd hailort-drivers
+```
+Compilar el controlador.
+```
+cd linux/pcie
+make all
+sudo make install
+```
+Descargar el firmware y cargarlo.
+```
+./download_firmware.sh
+sudo mkdir -p /lib/firmware/hailo
+sudo cp hailo8_fw.4.22.0.bin /lib/firmware/hailo/hailo8_fw.bin
+```
+Revisar si es detectado.
+```
+ls -l /dev/hailo*
+sudo dmesg | grep -i hailo
+```
+Descargar HailoRT for testing.
+```
+cd
+git clone https://github.com/hailo-ai/hailort.git
+cd hailort
+git checkout hailo8
+```
+Installar HailoRT.
+```
+cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release
+sudo cmake --build build --config release --target install
 ```
