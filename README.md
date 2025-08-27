@@ -11,7 +11,7 @@ sudo apt update && apt upgrade -y
 ```
 sudo apt-get install python3-pip git python3-pip -y
 ```
-
+---
 ## Instalación de ROS2 Jazzy Jalisco.
 
 Para mas info referir a la documentación original.
