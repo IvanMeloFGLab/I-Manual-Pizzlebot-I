@@ -182,18 +182,23 @@ rpicam-hello -camera <camera_number>
 
 ## Crear cámara virtual y pipeline para uso en ROS2 a travéz de OpenCV.
 
+Descargar, compilar e instalar v4l2loopback desde fuente.
+```
+sudo apt install git make
+git clone https://github.com/umlaeute/v4l2loopback
+cd v4l2loopback
+make
+sudo make install
+sudo depmod -a
+```
+Crear cámara virtual, video_nr=<número de dispocitivo virtual> ej.100 para evitar conflictos con camaras reales,
+card_label=<Nombre de cámara virtual>, exclusive_caps=1 modo donde el dispositivo solo reporta capacidades de salida.
+```
+sudo modprobe v4l2loopback video_nr=100 card_label="RPiCam Virtual" exclusive_caps=1
 ```
 
 ```
-
-
-```
-
-```
-
-
-```
-
+rpicam-vid -t 0 --codec mjpeg --inline -o - | ffmpeg -f mjpeg -i - -f v4l2 -pix_fmt yuyv422 /dev/video100
 ```
 ## Instalación de HAILO8 TPU
 
