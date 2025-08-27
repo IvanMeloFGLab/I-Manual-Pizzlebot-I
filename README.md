@@ -79,7 +79,7 @@ Crear un espacio de trabajo para ROS2.
 cd && mkdir ros2_ws
 ```
 
-
+---
 ## Instalación de Micro-ros
 
 Para mas info referir a la documentación original.
