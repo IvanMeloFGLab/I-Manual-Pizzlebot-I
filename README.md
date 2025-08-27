@@ -113,7 +113,7 @@ Crear el agente de micro-ROS.
 ros2 run micro_ros_setup build_agent.sh
 source install/local_setup.bash
 ```
-
+---
 ## Cámara RPI V2 configuración y pruebas.
 
 Siguiendo procedimiento de:
@@ -179,7 +179,7 @@ rpicam-hello --list-cameras
 ```
 rpicam-hello -camera <camera_number>
 ```
-
+---
 ## Crear cámara virtual y pipeline para uso en ROS2 a travéz de OpenCV.
 
 Descargar, compilar e instalar v4l2loopback desde fuente.
@@ -200,6 +200,7 @@ sudo modprobe v4l2loopback video_nr=100 card_label="RPiCam Virtual" exclusive_ca
 ```
 rpicam-vid -t 0 --codec mjpeg --inline -o - | ffmpeg -f mjpeg -i - -f v4l2 -pix_fmt yuyv422 /dev/video100
 ```
+----
 ## Instalación de HAILO8 TPU
 
 https://ubuntu.com/blog/hackers-guide-to-the-raspberry-pi-ai-kit-on-ubuntu
