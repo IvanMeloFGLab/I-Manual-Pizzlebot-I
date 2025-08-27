@@ -18,7 +18,7 @@ Para mas info referir a la documentación original.
 
 https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
-*** Instalación no oficial, compilando desde el código fuente en Ubuntu 25.04 ***
+*** Instalación no oficial, compilando el código fuente en Ubuntu 25.04 ***
 
 Intalación de dependencias de ROS2.
 ```
