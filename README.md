@@ -183,7 +183,7 @@ rpicam-hello -camera <camera_number>
 
 Para mas info referir a la documentación original.
 
-https://github.com/v4l2loopback/v4l2loopback
+https://github.com/umlaeute/v4l2loopback
 
 https://wiki.archlinux.org/title/V4l2loopback
 
