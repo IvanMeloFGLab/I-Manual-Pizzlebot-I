@@ -181,6 +181,11 @@ rpicam-hello -camera <camera_number>
 ---
 ## Crear cámara virtual y pipeline para uso en ROS2 a travéz de OpenCV.
 
+Para mas info referir a la documentación original.
+
+https://github.com/v4l2loopback/v4l2loopback
+https://wiki.archlinux.org/title/V4l2loopback
+
 Descargar, compilar e instalar v4l2loopback desde fuente.
 ```
 sudo apt install git make
