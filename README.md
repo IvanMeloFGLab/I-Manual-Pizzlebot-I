@@ -232,7 +232,7 @@ Revisar si es detectado.
 ls -l /dev/hailo*
 sudo dmesg | grep -i hailo
 ```
-Descargar HailoRT for testing.
+Descargar HailoRT para comprobar funcionamiento del TPU.
 ```
 cd
 git clone https://github.com/hailo-ai/hailort.git
@@ -243,4 +243,9 @@ Installar HailoRT.
 ```
 cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release
 sudo cmake --build build --config release --target install
+```
+Comprobar funcionamiento del TPU.
+```
+hailortcli fw-control identify
+hailortcli device test
 ```
