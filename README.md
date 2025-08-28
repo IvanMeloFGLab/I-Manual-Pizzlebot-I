@@ -233,8 +233,7 @@ sudo dmesg | grep -i hailo
 ```
 Descargar HailoRT para comprobar funcionamiento del TPU.
 ```
-cd
-git clone https://github.com/hailo-ai/hailort.git
+cd && git clone https://github.com/hailo-ai/hailort.git
 cd hailort
 git checkout hailo8
 ```
