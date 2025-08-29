@@ -12,6 +12,9 @@ sudo apt update && sudo apt upgrade -y
 sudo apt-get install git -y
 ```
 ---
+## Intalación de Python-3.12.6 (Requerido por la librería de python de Hailo).
+
+---
 ## Instalación de ROS2 Jazzy Jalisco.
 
 Para mas info referir a la documentación original.
@@ -19,6 +22,8 @@ Para mas info referir a la documentación original.
 https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 *** Instalación no oficial, compilando el código fuente en Ubuntu 25.04 ***
+
+Intalación de dependencias de Python-3.12.6.
 ```
 sudo apt install -y build-essential wget \
     libssl-dev zlib1g-dev libncurses5-dev libffi-dev \
