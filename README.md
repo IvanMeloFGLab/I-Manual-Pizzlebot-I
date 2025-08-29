@@ -14,6 +14,28 @@ sudo apt-get install git -y
 ---
 ## Intalación de Python-3.12.6 (Requerido por la librería de python de Hailo).
 
+Intalación de dependencias de Python-3.12.6.
+```
+sudo apt install -y build-essential wget \
+    libssl-dev zlib1g-dev libncurses5-dev libffi-dev \
+    libsqlite3-dev libbz2-dev libreadline-dev liblzma-dev
+```
+
+```
+cd && wget https://www.python.org/ftp/python/3.12.6/Python-3.12.6.tgz
+tar -xvf Python-3.12.6.tgz
+cd Python-3.12.6
+```
+
+```
+./configure --enable-optimizations
+make -j$(nproc)
+```
+
+```
+sudo make altinstal
+```
+
 ---
 ## Instalación de ROS2 Jazzy Jalisco.
 
@@ -23,19 +45,6 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 *** Instalación no oficial, compilando el código fuente en Ubuntu 25.04 ***
 
-Intalación de dependencias de Python-3.12.6.
-```
-sudo apt install -y build-essential wget \
-    libssl-dev zlib1g-dev libncurses5-dev libffi-dev \
-    libsqlite3-dev libbz2-dev libreadline-dev liblzma-dev
-
-cd && wget https://www.python.org/ftp/python/3.12.6/Python-3.12.6.tgz
-tar -xvf Python-3.12.6.tgz
-cd Python-3.12.6
-./configure --enable-optimizations
-make -j$(nproc)
-sudo make altinstal
-```
 Intalación de dependencias de ROS2.
 ```
 sudo apt update && sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev \
