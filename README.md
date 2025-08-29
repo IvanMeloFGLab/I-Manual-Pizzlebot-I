@@ -24,7 +24,7 @@ sudo apt install -y build-essential wget \
     libssl-dev zlib1g-dev libncurses5-dev libffi-dev \
     libsqlite3-dev libbz2-dev libreadline-dev liblzma-dev
 
-wget https://www.python.org/ftp/python/3.12.6/Python-3.12.6.tgz
+cd && wget https://www.python.org/ftp/python/3.12.6/Python-3.12.6.tgz
 tar -xvf Python-3.12.6.tgz
 cd Python-3.12.6
 ./configure --enable-optimizations
