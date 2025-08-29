@@ -121,7 +121,7 @@ Descargar los archivos fuente de ROS2.
 wget https://raw.githubusercontent.com/ros2/ros2/jazzy/ros2.repos
 vcs import src < ros2.repos
 cd src/
-git clone -b jazzy https://github.com/ros-perception/vision_opencv.git
+git clone -b rolling https://github.com/ros-perception/vision_opencv.git
 cd ..
 ```
 Resolver dependencias de ROS2.
