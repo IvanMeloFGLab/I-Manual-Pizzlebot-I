@@ -91,7 +91,7 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 Intalación de dependencias de ROS2.
 ```
-sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev \
+sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev libopencv-dev\
   libeigen3-dev libboost-all-dev libx11-dev libxext-dev libgl1-mesa-dev libglu1-mesa-dev locales liburdfdom-headers-dev
 ```
 Asegúrate de que tu configuración regional admite UTF-8.
@@ -104,7 +104,7 @@ locale
 ```
 Intalación de dependencias en python de ROS2.
 ```
-pip3 install catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions
+pip3 install catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions opencv-python
 ```
 Crear un espacio de trabajo para los paquetes internos de ROS2.
 ```
@@ -115,13 +115,14 @@ Descargar los archivos fuente de ROS2.
 ```
 wget https://raw.githubusercontent.com/ros2/ros2/jazzy/ros2.repos
 vcs import src < ros2.repos
+git clone -b jazzy https://github.com/ros-perception/vision_opencv.git
 ```
 Resolver dependencias de ROS2.
 ```
 sudo rosdep init || true
 rosdep update
 rosdep install --from-paths src --ignore-src -y --rosdistro jazzy \
-  --skip-keys "urdfdom_headers python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-vcstool"
+  --skip-keys "urdfdom_headers python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-vcstool cv_bridge"
 ```
 Compilación de archivos fuente de ROS2.
 *** ADVERTENCIA: Este procedimiento tarda alrededor de 3 horas. ***
