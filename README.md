@@ -113,7 +113,6 @@ cd ~/ros2_internal_ws
 ```
 Descargar los archivos fuente de ROS2.
 ```
-cd ~/ros2_internal_ws
 wget https://raw.githubusercontent.com/ros2/ros2/jazzy/ros2.repos
 vcs import src < ros2.repos
 ```
