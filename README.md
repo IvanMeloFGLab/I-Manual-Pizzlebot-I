@@ -47,8 +47,17 @@ Activar uso de Python-3.12.6 por defecto. (Simplificando futuros pasos)
 
 Usando update-alternatives para administrar los enlaces simbólicos donde el último número es la prioridad. (Entre mas grande el número mayor prioridad)
 ```
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.13 1
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.12 2
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.13 10
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.12 20
+
+sudo update-alternatives --install /usr/bin/python3-config python3-config /usr/bin/python3.13-config 10
+sudo update-alternatives --install /usr/bin/python3-config python3-config /usr/local/bin/python3.12-config 20
+
+sudo update-alternatives --install /usr/lib/libpython3.so python3-lib /usr/lib/libpython3.13.so 10
+sudo update-alternatives --install /usr/lib/libpython3.so python3-lib /usr/local/lib/libpython3.12.so 20
+
+sudo update-alternatives --install /usr/bin/pip3 pip3 /usr/bin/pip3 10
+sudo update-alternatives --install /usr/bin/pip3 pip3 /usr/local/bin/pip3.12 20
 ```
 Esto desplegará una lista, selecciona Python-3.12.6, si aparece con un * al incio significa que ya esta seleccionado por defecto.
 ```
@@ -59,6 +68,19 @@ Verifica selección por defecto.
 python3 --version
 ```
 Se debería ver algo como:
+
+Lo mismo para.
+```
+sudo update-alternatives --config python3-config
+sudo update-alternatives --config python3-lib
+sudo update-alternatives --config pip3
+```
+
+```
+pip3 --version
+python3-config --ldflags
+python3-config --includes
+```
 
 Esto rompera paquetes como apt que esperan la versión de Python por defecto de la distribución e impedira actualizar.
 
