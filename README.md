@@ -45,8 +45,9 @@ Se debería ver algo como:
 
 Activar uso de Python-3.12.6 por defecto. (Simplificando futuros pasos)
 
-Usando update-alternatives para administrar los enlaces simbólicos donde el último número es la prioridad.
+Usando update-alternatives para administrar los enlaces simbólicos donde el último número es la prioridad. (Entre mas grande el número mayor prioridad)
 ```
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.13 1
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.12 2
 ```
 Esto desplegará una lista, selecciona Python-3.12.6, si aparece con un * al incio significa que ya esta seleccionado por defecto.
@@ -59,12 +60,7 @@ python3 --version
 ```
 Se debería ver algo como:
 
-Esto rompera paquetes como apt que esperan la versión de Python por defecto de la distribución.
-
-Para resolverlo se especifica a todo apt, usar la versión que debería.
-```
-sudo sed -i '1s|python3$|python3.13|' /usr/bin/apt*
-```
+Esto rompera paquetes como apt que esperan la versión de Python por defecto de la distribución e impedira actualizar.
 
 Asegurar que pip este instaldo.
 ```
