@@ -106,7 +106,7 @@ Intalación de dependencias en python de ROS2.
 ```
 pip3 install catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions opencv-python
 ```
-Agrando al PATH vcstool.
+Agrando al PATH.
 ```
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
@@ -126,7 +126,7 @@ cd ..
 ```
 Resolver dependencias de ROS2.
 ```
-sudo rosdep init
+sudo -H rosdep init
 rosdep update
 rosdep install --from-paths src --ignore-src -y --rosdistro jazzy \
   --skip-keys "urdfdom_headers python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-vcstool cv_bridge libboost-python"
