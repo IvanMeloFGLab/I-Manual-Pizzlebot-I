@@ -91,7 +91,7 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 Intalación de dependencias de ROS2.
 ```
-sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev libopencv-dev libboost-python3-dev\
+sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev libopencv-dev libboost-python-dev\
   libeigen3-dev libboost-all-dev libx11-dev libxext-dev libgl1-mesa-dev libglu1-mesa-dev locales liburdfdom-headers-dev
 ```
 Asegúrate de que tu configuración regional admite UTF-8.
