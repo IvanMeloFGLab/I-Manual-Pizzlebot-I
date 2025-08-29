@@ -39,7 +39,7 @@ sudo make altinstall
 ```
 Verifica instalación.
 ```
-python3.12 --version
+cd && python3.12 --version
 ```
 Se debería ver algo como:
 
@@ -64,6 +64,11 @@ Asegurar que pip este instaldo.
 python3 -m ensurepip --upgrade
 python3 -m pip install --upgrade pip setuptools wheel
 ```
+Verifica instalación.
+```
+python3 -m pip --version
+```
+Se debería ver algo como:
 ---
 ## Instalación de ROS2 Jazzy Jalisco.
 
