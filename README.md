@@ -126,7 +126,7 @@ cd ..
 ```
 Resolver dependencias de ROS2.
 ```
-sudo rosdep init || true
+sudo rosdep init
 rosdep update
 rosdep install --from-paths src --ignore-src -y --rosdistro jazzy \
   --skip-keys "urdfdom_headers python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-vcstool cv_bridge libboost-python"
@@ -171,7 +171,6 @@ git clone -b $ROS_DISTRO https://github.com/micro-ROS/micro_ros_setup.git src/mi
 ```
 Actualizar dependencias utilizando rosdep.
 ```
-rosdep init
 rosdep update
 sudo apt update
 rosdep install --from-paths src --ignore-src -y
