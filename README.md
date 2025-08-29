@@ -41,16 +41,23 @@ Verifica instalación.
 ```
 python3.12 --version
 ```
+Se debería ver algo como:
+
 Activar uso de Python-3.12.6 por defecto. (Simplificando futuros pasos)
 
-Usando update-alternatives para administrar los enlaces simbolicos donde el último número es la prioridad.
+Usando update-alternatives para administrar los enlaces simbólicos donde el último número es la prioridad.
 ```
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.12 2
 ```
-Esto desplegará una lista, selecciona Python-3.12.6.
+Esto desplegará una lista, selecciona Python-3.12.6, si aparece con un * al incio significa que ya esta seleccionado por defecto.
 ```
 sudo update-alternatives --config python3
 ```
+Verifica selección por defecto.
+```
+python3 --version
+```
+Se debería ver algo como:
 
 ---
 ## Instalación de ROS2 Jazzy Jalisco.
