@@ -67,13 +67,14 @@ python3 -m pip install --upgrade pip setuptools wheel
 Verifica instalación.
 ```
 python3 -m pip --version
+pip3 --version
 ```
 Se debería ver algo como:
 
 Por último, limpiar archivos de installación ya no necesarios.
 ```
 rm ~/Python-3.12.6.tgz
-rm -rf ~/Python-3.12.6
+sudo rm -rf ~/Python-3.12.6
 ```
 
 ---
