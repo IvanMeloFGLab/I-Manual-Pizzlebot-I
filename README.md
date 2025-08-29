@@ -30,7 +30,7 @@ cd Python-3.12.6
 ```
 Configuración y compilación.
 ```
-./configure --enable-optimizations--enable-shared \
+./configure --enable-optimizations --enable-shared \
   CFLAGS="-fPIC" \
   LDFLAGS="-Wl,-rpath,/usr/local/lib"
 make -j$(nproc)
