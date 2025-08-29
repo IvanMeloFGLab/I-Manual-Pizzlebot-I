@@ -150,7 +150,8 @@ Compilación de archivos fuente de ROS2.
 cd ~/ros2_internal_ws
 colcon build --symlink-install --cmake-args \
   -DPython3_EXECUTABLE=/usr/local/bin/python3.12 \
-  -DPython3_FIND_STRATEGY=LOCATION
+  -DPython3_FIND_STRATEGY=LOCATION \
+  -DPython3_ROOT_DIR=/usr/local
 ```
 Obtener instalación de ROS2.
 ```
