@@ -9,7 +9,7 @@ sudo apt update && sudo apt upgrade -y
 ## Instalar dependencias.
 
 ```
-sudo apt-get install git -y
+sudo apt install -y git make
 ```
 ---
 ## Intalación de Python-3.12.6 (Requerido por la librería de python de Hailo).
@@ -91,7 +91,7 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 Intalación de dependencias de ROS2.
 ```
-sudo apt update && sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev \
+sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev \
   libeigen3-dev libboost-all-dev libx11-dev libxext-dev libgl1-mesa-dev libglu1-mesa-dev locales liburdfdom-headers-dev
 ```
 Asegúrate de que tu configuración regional admite UTF-8.
@@ -258,7 +258,6 @@ https://wiki.archlinux.org/title/V4l2loopback
 
 Descargar y compilar v4l2loopback desde fuente.
 ```
-sudo apt install git make
 git clone https://github.com/umlaeute/v4l2loopback
 cd v4l2loopback
 ```
