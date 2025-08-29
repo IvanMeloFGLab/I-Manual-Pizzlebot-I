@@ -59,6 +59,13 @@ python3 --version
 ```
 Se debería ver algo como:
 
+Esto rompera paquetes como apt que esperan la versión de Python por defecto de la distribución.
+
+Para resolverlo se especifica a todo apt, usar la versión que debería.
+```
+sudo sed -i '1s|python3$|python3.13|' /usr/bin/apt*
+```
+
 Asegurar que pip este instaldo.
 ```
 python3 -m ensurepip --upgrade
