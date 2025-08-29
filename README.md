@@ -14,26 +14,42 @@ sudo apt-get install git -y
 ---
 ## Intalación de Python-3.12.6 (Requerido por la librería de python de Hailo).
 
-Intalación de dependencias de Python-3.12.6.
+https://www.python.org/downloads/release/python-3126/
+
+Intalación de dependencias de compilación de Python-3.12.6.
 ```
 sudo apt install -y build-essential wget \
     libssl-dev zlib1g-dev libncurses5-dev libffi-dev \
     libsqlite3-dev libbz2-dev libreadline-dev liblzma-dev
 ```
-
+Descargar el archivo fuente de Python-3.12.6
 ```
 cd && wget https://www.python.org/ftp/python/3.12.6/Python-3.12.6.tgz
 tar -xvf Python-3.12.6.tgz
 cd Python-3.12.6
 ```
-
+Configuración y compilación.
 ```
 ./configure --enable-optimizations
 make -j$(nproc)
 ```
-
+Instalación alterna para no sobrescribir Python original del sistema.
 ```
-sudo make altinstal
+sudo make altinstall
+```
+Verifica instalación.
+```
+python3.12 --version
+```
+Activar uso de Python-3.12.6 por defecto. (Simplificando futuros pasos)
+
+Usando update-alternatives para administrar los enlaces simbolicos donde el último número es la prioridad.
+```
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.12 2
+```
+Esto desplegará una lista, selecciona Python-3.12.6.
+```
+sudo update-alternatives --config python3
 ```
 
 ---
@@ -54,7 +70,7 @@ Asegúrate de que tu configuración regional admite UTF-8.
 ```
 locale
 sudo locale-gen en_US en_US.UTF-8
-sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=e_US.UTF-8
 export LANG=en_US.UTF-8
 locale
 ```
@@ -67,7 +83,7 @@ Crear un espacio de trabajo para los paquetes internos de ROS2.
 mkdir -p ~/ros2_internal_ws/src
 cd ~/ros2_internal_ws
 ```
-Obtener los archivos fuente de ROS2.
+Descargar los archivos fuente de ROS2.
 ```
 cd ~/ros2_internal_ws
 wget https://raw.githubusercontent.com/ros2/ros2/jazzy/ros2.repos
