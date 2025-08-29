@@ -75,7 +75,7 @@ sudo update-alternatives --config python3-lib
 ```
 python3-config --ldflags
 python3-config --includes
-python3 -c "import sys,sysconfig;print(sys.executable);print(sysconfig.get_config_var('LIBDIR'))"
+ldconfig -p | grep libpython | sort || true
 ```
 
 Esto rompera paquetes como apt que esperan la versión de Python por defecto de la distribución e impedira actualizar.
