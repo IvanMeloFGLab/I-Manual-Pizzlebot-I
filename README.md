@@ -153,6 +153,7 @@ echo "alias so='cd ~/ros2_ws; source install/setup.bash'"
 Crear un espacio de trabajo para ROS2.
 ```
 cd && mkdir ros2_ws
+source ~/.bashrc
 ```
 
 ---
