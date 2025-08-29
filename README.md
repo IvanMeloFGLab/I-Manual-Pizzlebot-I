@@ -253,11 +253,14 @@ https://github.com/umlaeute/v4l2loopback
 
 https://wiki.archlinux.org/title/V4l2loopback
 
-Descargar, compilar e instalar v4l2loopback desde fuente.
+Descargar y compilar v4l2loopback desde fuente.
 ```
 sudo apt install git make
 git clone https://github.com/umlaeute/v4l2loopback
 cd v4l2loopback
+```
+Instalar v4l2loopback.
+```
 make
 sudo make install
 sudo depmod -a
