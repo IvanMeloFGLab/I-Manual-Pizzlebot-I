@@ -59,6 +59,11 @@ python3 --version
 ```
 Se debería ver algo como:
 
+Asegurar que pip este instaldo.
+```
+python3 -m ensurepip --upgrade
+python3 -m pip install --upgrade pip setuptools wheel
+```
 ---
 ## Instalación de ROS2 Jazzy Jalisco.
 
