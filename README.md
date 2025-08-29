@@ -9,7 +9,7 @@ sudo apt update && sudo apt upgrade -y
 ## Instalar dependencias.
 
 ```
-sudo apt install -y git make
+sudo apt install -y git make wget
 ```
 ---
 ## Intalación de Python-3.12.6 (Requerido por la librería de python de Hailo).
@@ -18,7 +18,7 @@ https://www.python.org/downloads/release/python-3126/
 
 Intalación de dependencias de compilación de Python-3.12.6.
 ```
-sudo apt install -y build-essential wget \
+sudo apt install -y build-essential \
     libssl-dev zlib1g-dev libncurses5-dev libffi-dev \
     libsqlite3-dev libbz2-dev libreadline-dev liblzma-dev
 ```
@@ -283,8 +283,7 @@ https://ubuntu.com/blog/hackers-guide-to-the-raspberry-pi-ai-kit-on-ubuntu
 
 Intalación de dependencias de Hailo8.
 ```
-sudo apt-get update && sudo apt-get install \
-    build-essential dkms linux-headers-$(uname -r) -y
+sudo apt install -y dkms linux-headers-$(uname -r)
 ```
 Clonar el repositorio hailort-drivers y cambiar a la rama hailo8.
 ```
