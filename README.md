@@ -91,7 +91,7 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 Intalación de dependencias de ROS2.
 ```
-sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev libopencv-dev\
+sudo apt install -y libbullet-dev libasio-dev libtinyxml2-dev libssl-dev libyaml-dev libopencv-dev libboost-python3-dev\
   libeigen3-dev libboost-all-dev libx11-dev libxext-dev libgl1-mesa-dev libglu1-mesa-dev locales liburdfdom-headers-dev
 ```
 Asegúrate de que tu configuración regional admite UTF-8.
@@ -122,7 +122,7 @@ Resolver dependencias de ROS2.
 sudo rosdep init || true
 rosdep update
 rosdep install --from-paths src --ignore-src -y --rosdistro jazzy \
-  --skip-keys "urdfdom_headers python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-vcstool cv_bridge"
+  --skip-keys "urdfdom_headers python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-vcstool cv_bridge libboost-python"
 ```
 Compilación de archivos fuente de ROS2.
 *** ADVERTENCIA: Este procedimiento tarda alrededor de 3 horas. ***
