@@ -106,6 +106,11 @@ Intalación de dependencias en python de ROS2.
 ```
 pip3 install catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions opencv-python
 ```
+Agrando al PATH vcstool.
+```
+echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
 Crear un espacio de trabajo para los paquetes internos de ROS2.
 ```
 mkdir -p ~/ros2_internal_ws/src
@@ -115,7 +120,9 @@ Descargar los archivos fuente de ROS2.
 ```
 wget https://raw.githubusercontent.com/ros2/ros2/jazzy/ros2.repos
 vcs import src < ros2.repos
+cd src/
 git clone -b jazzy https://github.com/ros-perception/vision_opencv.git
+cd ..
 ```
 Resolver dependencias de ROS2.
 ```
