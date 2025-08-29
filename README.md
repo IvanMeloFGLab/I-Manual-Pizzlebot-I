@@ -104,7 +104,7 @@ locale
 ```
 Intalación de dependencias en python de ROS2.
 ```
-pip3 install catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions --break-system-packages
+pip3 install catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions
 ```
 Crear un espacio de trabajo para los paquetes internos de ROS2.
 ```
