@@ -52,12 +52,6 @@ sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/pytho
 
 sudo update-alternatives --install /usr/bin/python3-config python3-config /usr/bin/python3.13-config 10
 sudo update-alternatives --install /usr/bin/python3-config python3-config /usr/local/bin/python3.12-config 20
-
-sudo update-alternatives --install /usr/lib/libpython3.so python3-lib /usr/lib/libpython3.13.so 10
-sudo update-alternatives --install /usr/lib/libpython3.so python3-lib /usr/local/lib/libpython3.12.so 20
-
-sudo update-alternatives --install /usr/bin/pip3 pip3 /usr/bin/pip3 10
-sudo update-alternatives --install /usr/bin/pip3 pip3 /usr/local/bin/pip3.12 20
 ```
 Esto desplegará una lista, selecciona Python-3.12.6, si aparece con un * al incio significa que ya esta seleccionado por defecto.
 ```
@@ -72,12 +66,9 @@ Se debería ver algo como:
 Lo mismo para.
 ```
 sudo update-alternatives --config python3-config
-sudo update-alternatives --config python3-lib
-sudo update-alternatives --config pip3
 ```
 
 ```
-pip3 --version
 python3-config --ldflags
 python3-config --includes
 ```
