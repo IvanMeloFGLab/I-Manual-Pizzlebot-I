@@ -17,7 +17,8 @@ sudo apt install -y git make wget python3-pip
 sudo python3 -m pip install --upgrade --break-system-packages pip setuptools wheel
 ```
 Se debería ver algo como:
-![alt text](https://github.com/IvanMeloFGLab/I-Manual-Pizzlebot-I/tree/main/images/uppy.png "UPPY")
+
+![alt text](images/uppy.png "UPPY")
 ---
 ## Instalación de ROS2 Jazzy Jalisco.
 
