@@ -102,6 +102,10 @@ Crear un espacio de trabajo para ROS2.
 cd && mkdir ros2_ws
 source ~/.bashrc
 ```
+Prueba de funcionamiento de ROS2.
+```
+ros2 run turtlesim turtlesim_node
+```
 
 ---
 ## Instalación de Micro-ros
