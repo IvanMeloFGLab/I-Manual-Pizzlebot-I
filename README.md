@@ -12,6 +12,11 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y git make wget python3-pip
 ```
 
+## Actualizar PIP.
+```
+python3 -m pip install --upgrade pip setuptools wheel
+```
+
 ---
 ## Instalación de ROS2 Jazzy Jalisco.
 
