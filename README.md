@@ -14,7 +14,7 @@ sudo apt install -y git make wget python3-pip
 
 ## Actualizar PIP.
 ```
-pip install --upgrade --break-system-packages pip setuptools wheel
+pip3 install --upgrade --break-system-packages pip setuptools wheel
 ```
 
 ---
@@ -41,7 +41,7 @@ locale
 ```
 Intalación de dependencias en python de ROS2.
 ```
-pip3 install catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions opencv-python lark pybind11
+pip3 install --break-system-packages catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions opencv-python lark pybind11
 ```
 Agrando al PATH.
 ```
