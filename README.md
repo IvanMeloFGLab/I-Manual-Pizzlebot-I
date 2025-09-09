@@ -9,7 +9,7 @@ sudo apt update && sudo apt upgrade -y
 ## Instalar dependencias.
 
 ```
-sudo apt install -y git make wget
+sudo apt install -y git make wget python3-pip
 ```
 ---
 ## Intalación de Python-3.12.6 (Requerido por la librería de python de Hailo).
