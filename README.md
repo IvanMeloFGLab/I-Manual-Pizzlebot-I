@@ -14,7 +14,7 @@ sudo apt install -y git make wget python3-pip
 
 ## Actualizar PIP.
 ```
-python3 -m pip install --upgrade pip setuptools wheel
+pip install --upgrade --break-system-packages pip setuptools wheel
 ```
 
 ---
