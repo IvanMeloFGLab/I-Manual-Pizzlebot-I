@@ -41,7 +41,7 @@ locale
 ```
 Intalación de dependencias en python de ROS2.
 ```
-pip3 install --break-system-packages catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions opencv-python lark pybind11
+sudo python3 -m pip install catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions opencv-python lark pybind11
 ```
 Agrando al PATH.
 ```
