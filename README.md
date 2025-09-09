@@ -45,6 +45,10 @@ Intalación de dependencias en python de ROS2.
 ```
 sudo python3 -m pip install --break-system-packages catkin_pkg vcstool rosdistro rosdep rosinstall-generator colcon-common-extensions opencv-python lark pybind11
 ```
+Se debería ver algo como:
+
+![alt text](images/deppy.png "UPPY")
+
 Agrando al PATH.
 ```
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
@@ -63,6 +67,10 @@ cd src/
 git clone -b rolling https://github.com/ros-perception/vision_opencv.git
 cd ..
 ```
+Se debería ver algo como:
+
+![alt text](images/rosget.png "UPPY")
+
 Resolver dependencias de ROS2.
 ```
 sudo -H rosdep init
