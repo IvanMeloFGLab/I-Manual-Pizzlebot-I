@@ -169,7 +169,6 @@ sudo ninja -C build install
 ```
 git clone https://github.com/raspberrypi/rpicam-apps.git
 cd rpicam-apps/
-sudo sed -i '/app.ShowPreview(completed_request, app.VideoStream());/d' ~/rpicam-apps/apps/rpicam_vid.cpp
 sudo apt install cmake libboost-program-options-dev libdrm-dev libexif-dev -y
 sudo apt install ffmpeg libavcodec-extra libavcodec-dev libavdevice-dev libpng-dev libpng-tools libepoxy-dev -y
 sudo apt install qt5-qmake qtmultimedia5-dev -y
