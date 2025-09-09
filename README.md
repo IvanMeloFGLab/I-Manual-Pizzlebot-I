@@ -72,12 +72,7 @@ Compilación de archivos fuente de ROS2.
 *** ADVERTENCIA: Este procedimiento tarda alrededor de 3 horas. ***
 ```
 cd ~/ros2_internal_ws
-colcon build --symlink-install --cmake-args \
-  -DPython3_EXECUTABLE=/usr/local/bin/python3.12 \
-  -DPython3_FIND_STRATEGY=LOCATION \
-  -DPython3_USE_STATIC_LIBS=OFF \
-  -DPython3_LIBRARY=/usr/local/lib/libpython3.12.so \
-  -DPython3_INCLUDE_DIR=/usr/local/include/python3.12
+colcon build --symlink-install
 ```
 Obtener instalación de ROS2.
 ```
