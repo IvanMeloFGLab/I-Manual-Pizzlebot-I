@@ -91,9 +91,6 @@ source ~/ros2_internal_ws/install/setup.bash
 Configuración de ROS2 y adición de alias para atajos.
 ```
 echo "source ~/ros2_internal_ws/install/setup.bash" >> ~/.bashrc
-echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
-echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
-echo "export _colcon_cd_root=~/ros2_internal_ws/install/"
 echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'"
 echo "alias so='cd ~/ros2_ws; source install/setup.bash'"
 ```
@@ -163,7 +160,7 @@ sudo apt install clang meson ninja-build pkg-config libyaml-dev python3-yaml pyt
 ```
 
 ```
-git clone https://github.com/raspberrypi/libcamera.git
+cd && git clone https://github.com/raspberrypi/libcamera.git
 cd libcamera
 meson setup build --buildtype=release -Dpipelines=rpi/vc4,rpi/pisp -Dipas=rpi/vc4,rpi/pisp -Dv4l2=true -Dgstreamer=enabled -Dtest=false -Dlc-compliance=disabled -Dcam=disabled -Dqcam=disabled -Ddocumentation=disabled -Dpycamera=enabled
 ninja -C build install
