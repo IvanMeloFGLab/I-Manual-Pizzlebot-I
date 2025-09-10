@@ -153,13 +153,14 @@ https://github.com/raspberrypi/rpicam-apps.git
 
 https://www.waveshare.com/wiki/IMX219-83_Stereo_Camera#Working_with_Raspberry_Pi_5_.28libcamera.29:%7E:text=Camera%20Documentation.-,Working%20with%20Raspberry%20Pi%205%20(libcamera),-Bookworm%20will%20not
 
+Instalación de dependencias de libcamera y rpicam-apps.
 ```
 sudo apt install clang meson ninja-build pkg-config libyaml-dev python3-yaml python3-ply python3-jinja2 \
   openssl libdw-dev libunwind-dev libudev-dev libudev-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
   libpython3-dev pybind11-dev libevent-dev libtiff-dev qt6-base-dev qt6-tools-dev-tools liblttng-ust-dev \
   python3-jinja2 lttng-tools libexif-dev libjpeg-dev pybind11-dev libevent-dev libgtest-dev abi-compliance-checker -y
 ```
-
+Descarga, compilación e instalación de libcamera.
 ```
 cd && git clone https://github.com/raspberrypi/libcamera.git
 cd libcamera
@@ -167,7 +168,7 @@ meson setup build --buildtype=release -Dpipelines=rpi/vc4,rpi/pisp -Dipas=rpi/vc
 ninja -C build install
 sudo ninja -C build install
 ```
-
+Descarga, compilación e instalación de rpicam-apps.
 ```
 cd && git clone https://github.com/raspberrypi/rpicam-apps.git
 cd rpicam-apps/
@@ -178,27 +179,27 @@ meson setup build -Denable_libav=enabled -Denable_drm=enabled -Denable_egl=enabl
 meson compile -C build
 sudo meson install -C build
 ```
-
+Crear los enlaces y el caché necesarios para las bibliotecas compartidas y verificar instalación de rpicam-apps.
 ```
 sudo ldconfig
 rpicam-still --version
 ```
-
+Añadir el sensor a la configuración de boot.
 ```
 sudo tee -a /boot/firmware/config.txt <<EOF
 dtoverlay=imx219,cam0
 dtoverlay=imx219,cam1
 EOF
 ```
-
+Reiniciar.
 ```
 sudo reboot
 ```
-
+Listar cámaras disponibles.
 ```
 rpicam-hello --list-cameras
 ```
-
+Verificar funcionamiento de rpicam-apps.
 ```
 rpicam-hello -camera <camera_number>
 ```
@@ -245,7 +246,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable v4l2loopback.service
 sudo systemctl start v4l2loopback.service
 ```
-
+Prueba de funcionamiento.
 ```
 rpicam-vid -t 0 --codec mjpeg --inline -o - | ffmpeg -f mjpeg -i - -f v4l2 -pix_fmt yuyv422 /dev/video100
 ```
