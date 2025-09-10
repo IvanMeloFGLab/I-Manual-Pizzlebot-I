@@ -9,7 +9,7 @@ sudo apt update && sudo apt upgrade -y
 ## Instalar dependencias.
 
 ```
-sudo apt install -y git make wget python3-pip raspberrypi-kernel-headers
+sudo apt install -y git make wget python3-pip linux-headers-$(uname -r) dkms
 ```
 
 ## Actualizar PIP.
@@ -236,10 +236,6 @@ rpicam-vid -t 0 --codec mjpeg --inline -o - | ffmpeg -f mjpeg -i - -f v4l2 -pix_
 
 https://ubuntu.com/blog/hackers-guide-to-the-raspberry-pi-ai-kit-on-ubuntu
 
-Intalación de dependencias de Hailo8.
-```
-sudo apt install -y dkms linux-headers-$(uname -r)
-```
 Clonar el repositorio hailort-drivers y cambiar a la rama hailo8.
 ```
 cd && git clone --branch hailo8 https://github.com/hailo-ai/hailort-drivers.git
