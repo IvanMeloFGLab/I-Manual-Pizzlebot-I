@@ -222,10 +222,28 @@ make
 sudo make install
 sudo depmod -a
 ```
-Crear cámara virtual, video_nr=<número de dispocitivo virtual> ej.100 para evitar conflictos con camaras reales,
+Crear servicio para cámara virtual, video_nr=<número de dispocitivo virtual> ej.100 para evitar conflictos con camaras reales,
 card_label=<Nombre de cámara virtual>, exclusive_caps=1 modo donde el dispositivo solo reporta capacidades de salida.
 ```
-sudo modprobe v4l2loopback video_nr=100 card_label="RPiCam Virtual" exclusive_caps=1
+sudo tee /etc/systemd/system/v4l2loopback.service > /dev/null << 'EOF'
+[Unit]
+Description=Load v4l2loopback module
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/modprobe v4l2loopback video_nr=100 card_label="RPiCam Virtual" exclusive_caps=1
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+Iniciar servicio.
+```
+sudo systemctl daemon-reload
+sudo systemctl enable v4l2loopback.service
+sudo systemctl start v4l2loopback.service
 ```
 
 ```
