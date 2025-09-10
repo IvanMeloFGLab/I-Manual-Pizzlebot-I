@@ -169,7 +169,7 @@ sudo ninja -C build install
 ```
 
 ```
-git clone https://github.com/raspberrypi/rpicam-apps.git
+cd && git clone https://github.com/raspberrypi/rpicam-apps.git
 cd rpicam-apps/
 sudo apt install cmake libboost-program-options-dev libdrm-dev libexif-dev -y
 sudo apt install ffmpeg libavcodec-extra libavcodec-dev libavdevice-dev libpng-dev libpng-tools libepoxy-dev -y
