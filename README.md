@@ -9,7 +9,7 @@ sudo apt update && sudo apt upgrade -y
 ## Instalar dependencias.
 
 ```
-sudo apt install -y git make wget python3-pip
+sudo apt install -y git make wget python3-pip raspberrypi-kernel-headers
 ```
 
 ## Actualizar PIP.
@@ -213,7 +213,7 @@ https://wiki.archlinux.org/title/V4l2loopback
 
 Descargar y compilar v4l2loopback desde fuente.
 ```
-git clone https://github.com/umlaeute/v4l2loopback
+cd && git clone https://github.com/umlaeute/v4l2loopback
 cd v4l2loopback
 ```
 Instalar v4l2loopback.
@@ -242,7 +242,7 @@ sudo apt install -y dkms linux-headers-$(uname -r)
 ```
 Clonar el repositorio hailort-drivers y cambiar a la rama hailo8.
 ```
-git clone --branch hailo8 https://github.com/hailo-ai/hailort-drivers.git
+cd && git clone --branch hailo8 https://github.com/hailo-ai/hailort-drivers.git
 cd hailort-drivers
 ```
 Compilar el controlador.
