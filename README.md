@@ -249,7 +249,7 @@ sudo make install
 ```
 Descargar el firmware y cargarlo.
 ```
-./download_firmware.sh
+cd ../.. && ./download_firmware.sh
 sudo mkdir -p /lib/firmware/hailo
 sudo cp hailo8_fw.4.22.0.bin /lib/firmware/hailo/hailo8_fw.bin
 ```
