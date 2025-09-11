@@ -92,8 +92,8 @@ Configuración de ROS2 y adición de alias para atajos.
 ```
 echo "source ~/ros2_internal_ws/install/setup.bash" >> ~/.bashrc
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
-echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'"
-echo "alias so='cd ~/ros2_ws; source install/setup.bash'"
+echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'" >> ~/.bashrc
+echo "alias so='cd ~/ros2_ws; source install/setup.bash'" >> ~/.bashrc
 ```
 Crear un espacio de trabajo para ROS2.
 ```
