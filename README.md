@@ -247,8 +247,7 @@ sudo systemctl start v4l2loopback.service
 ```
 Prueba de funcionamiento.
 ```
-rpicam-vid -t 0 --codec mjpeg --inline -o - | ffmpeg -f mjpeg -i - -f v4l2 -pix_fmt yuyv422 /dev/video100
-rpicam-vid -n -t 0 --codec yuv420 --width 1920 --height 1080 --framerate 30 -o - | ffmpeg -f rawvideo -pix_fmt yuv420p -s 1920x1080 -r 30 -i - -f v4l2 -pix_fmt yuv420p /dev/video100
+rpicam-vid -t 0 --vflip --codec yuv420 --width 1920 --height 1080 --framerate 30 -o - | ffmpeg -f rawvideo -pix_fmt yuv420p -s 1920x1080 -r 30 -i - -f v4l2 -pix_fmt yuv420p /dev/video100
 ```
 ----
 ## Instalación de HAILO8 TPU
