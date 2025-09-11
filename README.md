@@ -278,6 +278,10 @@ Revisar si es detectado.
 ls -l /dev/hailo*
 sudo dmesg | grep -i hailo
 ```
+Dar permisos de uso.
+```
+echo 'KERNEL=="hailo*", MODE="0666"' | sudo tee /etc/udev/rules.d/99-hailo.rules > /dev/null && sudo udevadm control --reload-rules && sudo udevadm trigger
+```
 Descargar HailoRT para comprobar funcionamiento del TPU.
 ```
 cd && git clone https://github.com/hailo-ai/hailort.git
