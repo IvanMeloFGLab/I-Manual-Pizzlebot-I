@@ -290,6 +290,5 @@ sudo cmake --build build --config release --target install
 ```
 Comprobar funcionamiento del TPU.
 ```
-hailortcli fw-control identify
-hailortcli device test
+sudo hailortcli fw-control identify
 ```
