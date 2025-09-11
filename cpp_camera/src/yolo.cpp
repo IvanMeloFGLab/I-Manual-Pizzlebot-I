@@ -76,7 +76,7 @@ public:
 
         vstreams_ = std::make_pair(input_vstreams.release(), output_vstreams.release());
 
-        in_bytes_ = vstreams_.first[0].get_frame_size();     // e.g. 320*320*3
+        in_bytes_ = vstreams_.first[0].get_frame_size();
         host_in_buf_.resize(in_bytes_);
 
         Yolo11::print_net_banner(vstreams_);

@@ -22,7 +22,7 @@ add_executable(camera_pub src/camera_publisher.cpp)
 ament_target_dependencies(camera_pub rclcpp sensor_msgs cv_bridge OpenCV)
 
 add_executable(yolo11 src/yolo.cpp)
-ament_target_dependencies(yolo11 rclcpp sensor_msgs cv_bridge OpenCV)
+ament_target_dependencies(yolo11 rclcpp sensor_msgs cv_bridge OpenCV ament_index_cpp)
 target_link_libraries(yolo11 HailoRT::libhailort Threads::Threads)
 
 install(TARGETS
