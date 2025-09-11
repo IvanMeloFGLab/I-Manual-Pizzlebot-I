@@ -127,16 +127,15 @@ rosdep install --from-paths src --ignore-src -y
 Crear herramientas micro-ROS y cargarlas.
 ```
 colcon build
-source install/local_setup.bash
+source install/setup.bash
 ```
-Descargar el agente de micro-ROS.
+
 ```
-ros2 run micro_ros_setup create_agent_ws.sh
-```
-Crear el agente de micro-ROS.
-```
-ros2 run micro_ros_setup build_agent.sh
-source install/local_setup.bash
+sudo tee /etc/udev/rules.d/99-usbserial.rules > /dev/null << 'EOF'
+KERNEL=="ttyUSB0", MODE="0666"
+EOF
+sudo udevadm control --reload-rules
+sudo udevadm trigger
 ```
 ---
 ## Cámara RPI V2 configuración y pruebas.
@@ -278,9 +277,11 @@ Revisar si es detectado.
 ls -l /dev/hailo*
 sudo dmesg | grep -i hailo
 ```
-Dar permisos de uso.
+Dar permisos de uso a todos.
 ```
-echo 'KERNEL=="hailo*", MODE="0666"' | sudo tee /etc/udev/rules.d/99-hailo.rules > /dev/null && sudo udevadm control --reload-rules && sudo udevadm trigger
+echo 'KERNEL=="hailo*", MODE="0666"' | sudo tee /etc/udev/rules.d/99-hailo.rules > /dev/null
+sudo udevadm control --reload-rules
+sudo udevadm trigger
 ```
 Descargar HailoRT para comprobar funcionamiento del TPU.
 ```
