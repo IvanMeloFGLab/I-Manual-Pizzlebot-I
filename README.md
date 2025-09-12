@@ -12,9 +12,13 @@ sudo python3 -m pip install --upgrade --break-system-packages pip setuptools whe
 ```
 
 ## Instalar dependencias.
-
 ```
 sudo apt install -y git make wget python3-pip linux-headers-$(uname -r) dkms
+```
+
+## Clonar repositorio.
+```
+cd && git clone https://github.com/IvanMeloFGLab/I-Manual-Pizzlebot-I.git
 ```
 
 Se debería ver algo como:
