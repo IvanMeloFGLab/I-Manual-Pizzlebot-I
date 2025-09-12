@@ -50,7 +50,6 @@ Documentar y estandarizar el proceso de instalación y configuración de una **R
 
 - Raspberry Pi 5  
 - MicroSD de al menos **64 GB** o SSD recomendado  
-- Fuente de poder adecuada (mínimo 5V/5A)  
 - Ubuntu 25.04 para Raspberry Pi  
 - Módulo de cámara IMX219  
 - Hailo-8L AI HAT TPU  
@@ -199,7 +198,8 @@ cd && mv ~/I-Manual-Pizzlebot-I/microros_ws ~
 ```
 Actualizar dependencias.
 ```
-
+sudo dpkg -i ~/I-Manual-Pizzlebot-I/libfmt/libfmt9_9.1.0+ds1-2_arm64.deb
+sudo dpkg -i ~/I-Manual-Pizzlebot-I/libfmt/libfmt-dev_9.1.0+ds1-2_arm64.deb
 ```
 Crear herramientas micro-ROS y cargarlas.
 ```
