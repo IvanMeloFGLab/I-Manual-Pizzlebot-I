@@ -205,8 +205,10 @@ Crear herramientas micro-ROS y cargarlas.
 ```
 colcon build
 source install/setup.bash
+echo "source ~/microros_ws/install/setup.bash" >> ~/.bashrc
+source .bashrc
 ```
-
+Dar permisos de uso al USB0.
 ```
 sudo tee /etc/udev/rules.d/99-usbserial.rules > /dev/null << 'EOF'
 KERNEL=="ttyUSB0", MODE="0666"
@@ -214,6 +216,11 @@ EOF
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
+Prueba de funcionamiento.
+```
+ros2 run microros_agent microros_agent serial --dev /dev/ttyUSB0
+```
+
 ---
 ## Cámara RPI V2 configuración y pruebas.
 
