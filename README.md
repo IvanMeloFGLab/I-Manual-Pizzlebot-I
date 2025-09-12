@@ -41,8 +41,7 @@ Documentar y estandarizar el proceso de instalación y configuración de una **R
    - Ejecución de inferencias de prueba  
 
 5. **Integración completa**  
-   - Nodos ROS 2 para cámara + inferencia en TPU  
-   - Visualización en **RViz** y **OpenCV**  
+   - Nodos ROS 2 para cámara + inferencia en TPU   
 
 ---
 
