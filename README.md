@@ -100,14 +100,25 @@ echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 echo "alias cb='cd ~/ros2_ws; colcon build && source install/setup.bash'" >> ~/.bashrc
 echo "alias so='cd ~/ros2_ws; source install/setup.bash'" >> ~/.bashrc
 ```
-Crear un espacio de trabajo para ROS2.
-```
-cd && mkdir ros2_ws
-source ~/.bashrc
-```
 Prueba de funcionamiento de ROS2.
 ```
 ros2 run turtlesim turtlesim_node
+```
+Crear un espacio de trabajo para ROS2.
+```
+cd && mkdir ros2_ws
+```
+Mover codigo para el uso de la camara y TPU desde ROS2.
+```
+mv ~/I-Manual-Pizzlebot-I/cpp_camera ~/ros2_ws/src/ && cb
+```
+Pruba de funcionamiento.
+```
+ros2 run cpp_camera camera_pub
+```
+-- En otra terminal:
+```
+ros2 topic echo /video_source/raw
 ```
 
 ---
