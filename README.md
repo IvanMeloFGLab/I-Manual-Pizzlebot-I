@@ -6,16 +6,17 @@ Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2 en Ubuntu 25.04 para Raspberry Pi 5
 sudo apt update && sudo apt upgrade -y
 ```
 
+## Actualizar PIP.
+```
+sudo python3 -m pip install --upgrade --break-system-packages pip setuptools wheel
+```
+
 ## Instalar dependencias.
 
 ```
 sudo apt install -y git make wget python3-pip linux-headers-$(uname -r) dkms
 ```
 
-## Actualizar PIP.
-```
-sudo python3 -m pip install --upgrade --break-system-packages pip setuptools wheel
-```
 Se debería ver algo como:
 
 ![alt text](images/uppy.png "UPPY")
