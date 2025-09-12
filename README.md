@@ -129,17 +129,13 @@ Para mas info referir a la documentación original.
 
 https://micro.ros.org/docs/tutorials/core/first_application_linux/
 
-Crear un espacio de trabajo y descargar las herramientas micro-ROS.
+Crear un espacio de trabajo y copiar micro-ROS precompilado.
 ```
-cd && mkdir uros
-cd uros
-git clone -b $ROS_DISTRO https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
+cd && mv ~/I-Manual-Pizzlebot-I/microros_ws ~
 ```
-Actualizar dependencias utilizando rosdep.
+Actualizar dependencias.
 ```
-rosdep update
-sudo apt update
-rosdep install --from-paths src --ignore-src -y
+
 ```
 Crear herramientas micro-ROS y cargarlas.
 ```
