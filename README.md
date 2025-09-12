@@ -63,8 +63,6 @@ Documentar y estandarizar el proceso de instalación y configuración de una **R
 flowchart TD
     A[Camera IMX219] -->|Video Stream| B[ROS 2 Node Camera]
     B --> C[HAILO TPU - Inferencia]
-    C --> D[ROS 2 Node de Resultados]
-    D --> E[Visualización en RViz / OpenCV]
 ```
 
 ## Actualizar sistema.
