@@ -72,14 +72,15 @@ sudo apt update && sudo apt upgrade -y
 ```
 sudo python3 -m pip install --upgrade --break-system-packages pip setuptools wheel
 ```
+Se debería ver algo como:
+
+![alt text](images/uppy.png "UPPY")
 
 ## Instalar dependencias.
 ```
 sudo apt install -y git make wget python3-pip linux-headers-$(uname -r) dkms
 ```
-Se debería ver algo como:
 
-![alt text](images/uppy.png "UPPY")
 
 ## Clonar repositorio.
 ```
