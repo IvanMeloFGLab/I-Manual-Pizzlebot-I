@@ -9,7 +9,7 @@ La plataforma integra tres componentes clave:
 
 -  **ROS 2 Jazzy**: framework de robótica para comunicación entre nodos, sensores y actuadores, diseñado para sistemas distribuidos y escalables.  
 -  **HAILO TPU (AI HAT con chip Hailo-8L)**: acelerador de inteligencia artificial optimizado para visión por computadora e inferencia en tiempo real, con alto rendimiento y bajo consumo energético.  
-- 📷 **Cámara Raspberry Pi V2 (IMX219)**: módulo de cámara de 8 MP que, junto con el TPU, habilita aplicaciones de visión artificial como detección de objetos, reconocimiento de señales y navegación autónoma.  
+-  **Cámara Raspberry Pi V2 (IMX219)**: módulo de cámara de 8 MP que, junto con el TPU, habilita aplicaciones de visión artificial como detección de objetos, reconocimiento de señales y navegación autónoma.  
 
 El objetivo principal es contar con una plataforma más **estable, eficiente y de bajo consumo** en comparación con soluciones previas como la **Jetson Nano**, manteniendo compatibilidad con ROS 2 y asegurando que los pasos de instalación sean **reproducibles**.
 
@@ -21,7 +21,7 @@ Documentar y estandarizar el proceso de instalación y configuración de una **R
 
 ---
 
-## 🛠 Contenido del manual
+##  Contenido del manual
 
 1. **Preparación del entorno**  
    - Instalación de Ubuntu 25.04 en Raspberry Pi 5  
