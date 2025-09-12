@@ -362,7 +362,9 @@ sudo dmesg | grep -i hailo
 ```
 Dar permisos de uso a todos.
 ```
-echo 'KERNEL=="hailo*", MODE="0666"' | sudo tee /etc/udev/rules.d/99-hailo.rules > /dev/null
+sudo tee /etc/udev/rules.d/99-hailo.rules > /dev/null  << 'EOF'
+KERNEL=="hailo*", MODE="0666"
+EOF
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
