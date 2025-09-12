@@ -65,7 +65,7 @@ flowchart TD
     B --> C[HAILO TPU - Inferencia]
     C --> D[ROS 2 Node de Resultados]
     D --> E[Visualización en RViz / OpenCV]
-
+```
 
 ## Actualizar sistema.
 ```
