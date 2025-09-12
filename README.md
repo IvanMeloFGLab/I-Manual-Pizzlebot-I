@@ -1,5 +1,71 @@
 # |Manual-Pizzlebot|
-Instala ROS2 Jazzy, HAILO TPU, RPI Camara V2 en Ubuntu 25.04 para Raspberry Pi 5.
+#  Instalación de ROS 2 Jazzy + HAILO TPU + Cámara RPi V2 en Raspberry Pi 5 (Ubuntu 25.04)
+
+##  Introducción
+
+Este manual/documentación tiene como propósito guiar paso a paso la instalación, configuración y puesta en marcha de un entorno de desarrollo robótico sobre una **Raspberry Pi 5** con **Ubuntu 25.04**.  
+
+La plataforma integra tres componentes clave:
+
+-  **ROS 2 Jazzy**: framework de robótica para comunicación entre nodos, sensores y actuadores, diseñado para sistemas distribuidos y escalables.  
+-  **HAILO TPU (AI HAT con chip Hailo-8L)**: acelerador de inteligencia artificial optimizado para visión por computadora e inferencia en tiempo real, con alto rendimiento y bajo consumo energético.  
+- 📷 **Cámara Raspberry Pi V2 (IMX219)**: módulo de cámara de 8 MP que, junto con el TPU, habilita aplicaciones de visión artificial como detección de objetos, reconocimiento de señales y navegación autónoma.  
+
+El objetivo principal es contar con una plataforma más **estable, eficiente y de bajo consumo** en comparación con soluciones previas como la **Jetson Nano**, manteniendo compatibilidad con ROS 2 y asegurando que los pasos de instalación sean **reproducibles**.
+
+---
+
+##  Objetivo General
+
+Documentar y estandarizar el proceso de instalación y configuración de una **Raspberry Pi 5** con **Ubuntu 25.04**, integrando **ROS 2 Jazzy**, la **cámara IMX219** y el **TPU Hailo-8L**, para implementar un entorno de visión e inteligencia artificial optimizado para aplicaciones de robótica móvil.
+
+---
+
+## 🛠 Contenido del manual
+
+1. **Preparación del entorno**  
+   - Instalación de Ubuntu 25.04 en Raspberry Pi 5  
+   - Configuración inicial del sistema  
+
+2. **Instalación de ROS 2 Jazzy**  
+   - Dependencias y herramientas (`colcon`, `rosdep`)  
+   - Configuración de entorno y verificación con nodos básicos  
+
+3. **Configuración de la cámara IMX219**  
+   - Habilitación de controladores  
+   - Pruebas de captura y validación de video  
+
+4. **Instalación y uso del HAILO TPU**  
+   - Instalación de **HailoRT**  
+   - Carga de modelos (`.hef`)  
+   - Ejecución de inferencias de prueba  
+
+5. **Integración completa**  
+   - Nodos ROS 2 para cámara + inferencia en TPU  
+   - Visualización en **RViz** y **OpenCV**  
+
+---
+
+## Requisitos previos
+
+- Raspberry Pi 5  
+- MicroSD de al menos **64 GB** o SSD recomendado  
+- Fuente de poder adecuada (mínimo 5V/5A)  
+- Ubuntu 25.04 para Raspberry Pi  
+- Módulo de cámara IMX219  
+- Hailo-8L AI HAT TPU  
+
+---
+
+## Vista general de la arquitectura
+
+```mermaid
+flowchart TD
+    A[Camera IMX219] -->|Video Stream| B[ROS 2 Node Camera]
+    B --> C[HAILO TPU - Inferencia]
+    C --> D[ROS 2 Node de Resultados]
+    D --> E[Visualización en RViz / OpenCV]
+
 
 ## Actualizar sistema.
 ```
