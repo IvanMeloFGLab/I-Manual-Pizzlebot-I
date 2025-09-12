@@ -78,15 +78,15 @@ sudo python3 -m pip install --upgrade --break-system-packages pip setuptools whe
 ```
 sudo apt install -y git make wget python3-pip linux-headers-$(uname -r) dkms
 ```
+Se debería ver algo como:
+
+![alt text](images/uppy.png "UPPY")
 
 ## Clonar repositorio.
 ```
 cd && git clone https://github.com/IvanMeloFGLab/I-Manual-Pizzlebot-I.git
 ```
 
-Se debería ver algo como:
-
-![alt text](images/uppy.png "UPPY")
 ---
 ## Instalación de ROS2 Jazzy Jalisco.
 
