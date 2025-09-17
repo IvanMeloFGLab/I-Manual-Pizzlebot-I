@@ -383,3 +383,47 @@ Comprobar funcionamiento del TPU.
 ```
 hailortcli fw-control identify
 ```
+
+## Levantar Hotspot persistente en la Raspberry pi (Persistente)
+
+Crear el script 'start-hotspot.sh' dentro de la carpeta /bin y darle persmisos de ejecución 
+```
+cd /usr/local/bin/
+touch start-hotspot.sh
+sudo chmod 777 start-hotspot.sh
+```
+
+editar el archivo 'start-hotspot.sh' y pegar las siguientes lineas: 
+```
+#!/bin/bash
+nmcli connection up "Hotspot"
+```
+
+Crear el servicio que sevantará el hotspot
+```
+sudo nano /etc/systemd/system/hotspot.service
+```
+
+editar el archivo 'hotspot.service' y pegar lo siguiente
+```
+[Unit]
+Description=Levantar hotspot al inicio
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/start-hotspot.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Activar el servicio
+```
+sudo systemctl enable hotspot.service
+```
+
+Una vez que se active el servicio, reiniciar y correr
+```
+nmcli dev wifi hotspot ifname wlan0 ssid Nombre_del_hotspot password "Contraseña_del_hotspot"
