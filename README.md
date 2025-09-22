@@ -388,24 +388,18 @@ hailortcli fw-control identify
 
 Crear el script 'start-hotspot.sh' dentro de la carpeta /bin y darle persmisos de ejecución 
 ```
-cd /usr/local/bin/
-touch start-hotspot.sh
-sudo chmod 777 start-hotspot.sh
-```
-
-editar el archivo 'start-hotspot.sh' y pegar las siguientes lineas: 
-```
+sudo tee -a /usr/local/bin/start-hotspot.sh <<EOF
 #!/bin/bash
 nmcli connection up "Hotspot"
+EOF
+```
+```
+sudo chmod 777 /usr/local/bin/start-hotspot.sh
 ```
 
-Crear el servicio que sevantará el hotspot
+Crear el servicio 'hotspot.service', el cual levantará el hotspot
 ```
-sudo nano /etc/systemd/system/hotspot.service
-```
-
-editar el archivo 'hotspot.service' y pegar lo siguiente
-```
+sudo tee -a /etc/systemd/system/hotspot.service <<EOF
 [Unit]
 Description=Levantar hotspot al inicio
 After=network.target
@@ -417,6 +411,8 @@ RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
+
+EOF
 ```
 
 Activar el servicio
